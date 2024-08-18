@@ -20,4 +20,8 @@ RUN wget -O ./steamcmd_linux.tar.gz http://media.steampowered.com/installer/stea
 COPY --chmod=664 --chown=steam:steam server.cfg /home/steam/css/cstrike/cfg/server.cfg
 COPY --chmod=775 --chown=steam:steam start_server.sh /home/steam/css/start_server.sh
 
+ENV SERVER_NAME="n-css"
+ENV SERVER_PASSWORD=""
+ENV RCON_PASSWORD=""
+
 ENTRYPOINT /home/steam/css/start_server.sh
