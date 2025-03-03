@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 RUN dpkg --add-architecture i386 && \
     apt update && \
-    apt install -y wget unzip lib32gcc-s1 libncurses5 libncurses5:i386 libsdl2-2.0-0:i386 && \
+    apt install -y wget unzip lib32gcc-s1 libncurses5 lib32stdc++6 libncurses5:i386 libsdl2-2.0-0:i386 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     useradd -ms /bin/bash steam
